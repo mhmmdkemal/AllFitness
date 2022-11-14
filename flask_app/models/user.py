@@ -144,7 +144,7 @@ class User:
 
         # Minimum eight characters, at least one letter and one number
         if not PASS_REGEX.match(user_data["password"]):
-            flash("Minimum eight characters, at least one letter and one number!", "register")
+            flash("Password must be a minimum of eight characters, with at least one letter and one number", "register")
             is_valid = False
         # Password must be 8 or more characters
         if len(user_data["password"]) < 8:

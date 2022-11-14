@@ -7,7 +7,7 @@ bcrypt = Bcrypt(app) # we are creating an object called bcrypt, which is made by
 
 #Routes below
 
-@app.route("/")
+@app.route("/log_reg_page")
 def log_reg_page():
     return render_template("log_reg_page.html")
 
@@ -38,7 +38,12 @@ def log_user_in():
     # Get the correct user's id and save in session
     session["user_id"] = valid_user.id
     # Redirect them appropriately
+    # return redirect("/member/dashboard")
     return redirect("/member/dashboard")
+
+@app.route("/")
+def welcome():
+    return render_template("welcome.html")
 
 @app.route('/logout')
 def log_user_out():

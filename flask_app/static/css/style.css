@@ -63,7 +63,25 @@
 }
 
 #whats_new{
-    font-size: 50px;
+    font-size: 35px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 10px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#tutorials_title{
+    font-size: 35px;
+    font-weight: 700;
+    margin-left: 25px;
+    padding: 0px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+#check_this{
+    font-size: 35px;
     font-weight: 700;
     margin: 20px;
     padding: 0px;
@@ -71,19 +89,20 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
-#check_this{
-    font-size: 42px;
-    font-weight: 700;
-    margin: 20px;
-    padding: 0px;
-    text-decoration: underline;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-}
+
 
 
 .home_pgh{
+    position: relative;
+    top: -75px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(255, 255, 0);
+    text-decoration:solid;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
-    margin: 25px;
+
 
 }
 
@@ -94,6 +113,14 @@
 
 .w_by_muscles{
     margin: 20px;
+}
+
+.w_b_m{
+    position: relative;
+    top: -60px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: yellow;
+    font-size: 22px;
 }
 
 
@@ -150,7 +177,7 @@
     
     background-size: cover;
     background-position: center;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.475), rgba(0, 0, 0, 0.475)), url(../imgs/pink_lights.jpeg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.475), rgba(0, 0, 0, 0.475)), url(../imgs/dead_lift.png);
 
 
 }
@@ -158,12 +185,11 @@
 .tutorials_bg{
     animation:fadeIn 2s ease-in-out;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin: 20px;
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.475), rgba(0, 0, 0, 0.475)), url(../imgs/lions.jpeg) ;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.475), rgba(0, 0, 0, 0.475)), url(../imgs/white_gym.webp) ;
 
 }
 
@@ -246,21 +272,19 @@
 
 
 .home_sm_nav{
-    background-color: rgba(70, 79, 87, 0.459);
-    box-shadow: 2px 2px white;
-    border-radius: 10px;
+    margin-top: 55px;
+    font-size: 15px;
 }
 
 .home_nav{
 
     width: 85%;
-    margin: auto;
-    margin-top: -20px;
     padding: 2px 0;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: end;
-
+/* ========================================================== */
 }
 
 
@@ -284,7 +308,7 @@
     content: '';
     height: 3px;
     width: 0;
-    background: #ff0c6d;
+    background: rgb(255, 255, 0);
     position: absolute;
     left: 0;
     bottom: -2px;
@@ -316,7 +340,7 @@
     content: '';
     height: 4px;
     width: 0;
-    background: #ff0c6d;
+    background: rgb(255, 255, 0);
     position: absolute;
     left: 0;
     bottom: -2px;
@@ -464,13 +488,18 @@ border-radius: 10px;
 
 
 /* =====TUTORIALS LINKS========================================== */
-
+.M{
+    color: yellow;
+}
 #links_nav{
-    background-color: rgba(0, 0, 0, 0.338);
-    border-radius: 5%;
-    box-shadow: 2px 2px white;
+
+    background: linear-gradient(to right,rgb(0, 0, 0) 35%,rgba(255, 255, 0, 0.197));
+    border-radius: 2%;
+    border: 2px solid yellow;
     margin: 15px;
-    padding: 20px
+    padding: 20px;
+    position: relative;
+    top: -100px;
 }
 
 
@@ -485,7 +514,7 @@ border-radius: 10px;
 #links_nav ul li a{
     border-radius: 5px;
     text-decoration: none;
-    color: rgb(255, 12, 109);
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -494,7 +523,7 @@ border-radius: 10px;
     content: '';
     height: 4px;
     width: 0;
-    background: #26ed4a;
+    background: yellow;
     position: absolute;
     left: 0;
     bottom: -2px;
@@ -619,7 +648,7 @@ button{
     margin: 20px 10px;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid rgba(255, 12, 109, 0.731);
+    border: 2px solid yellow;
     background: transparent;
     color: white;
     cursor: pointer;
@@ -666,7 +695,7 @@ button{
 }
 
 .span{
-    background:#971c4d;
+    background:rgba(253, 253, 253, 0.611);
     height: 100%;
     width: 0;
     border-radius: 25px;
@@ -678,7 +707,7 @@ button{
 
 }
 span{
-    background:#ff0c6d;
+    background:yellow;
     height: 100%;
     width: 0;
     border-radius: 25px;
@@ -718,10 +747,17 @@ html, .bodyy {
     font-family: 'Roboto';
     text-align: center;
     color: #f5f5f5;
+    height:100vh;
+    width: 100vh;
     animation:fadeIn 2s ease-in-out;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.250), rgba(0, 0, 0, 0.250)), url(../imgs/platform.jpeg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.250), rgba(0, 0, 0, 0.250)), url(../imgs/black_carbon.jpeg);
 
 }
+
+
+
+
+/* ====================== */
 
 .hero {
     height: 100%;
@@ -773,12 +809,13 @@ html, .bodyy {
 .p2 {
     display: inline-block;
     font-size: 1em;
-    font-weight: 500;
-    font-size: 150px;
+    font-weight: 700;
+    font-size: 200px;
     text-decoration: underline;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 0;
     line-height: 1;
-    color: #c41e60;
+    color: yellow;
     @media only screen and (max-width: 465px) {
     position: relative;
     top: 0.6em;
@@ -796,14 +833,15 @@ html, .bodyy {
 
 .w_t{
     position: absolute;
-    bottom: 10px;
+    bottom: -20px;
     right: 40%;
 
 }
 
 .w_time{
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: underline;
+    font-size: 35px;
 }
 
 
@@ -838,3 +876,217 @@ html, .bodyy {
 .edit_btn{
     border-radius: 20%;
 }
+
+.icon{
+    width: 200px;
+    position:absolute;
+    right: -625px;
+    bottom: -220px;
+    height: 200px;
+    border-radius: 50%;
+    /* background: white; */
+    perspective: 800px;
+}
+.icon .icon_items{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    margin-top: -10px;
+}
+
+.icon .icon_items:nth-child(1){
+    border-bottom: 6px solid rgb(255, 255, 255);
+    transform: rotateX(35deg) rotateY(-45deg);
+    animation: rotate-one 1s linear infinite;
+}
+
+.icon .icon_items:nth-child(2){
+    border-right: 6px solid rgb(255, 255, 255);
+    transform: rotateX(50deg) rotateY(10deg);
+    animation: rotate-two 1s linear infinite;
+}
+.icon .icon_items:nth-child(3){
+    border-top: 6px solid rgb(255, 255, 0);
+    transform: rotateX(35deg) rotateY(55deg);
+    animation: rotate-three 1s linear infinite;
+}
+.icon .icon_items:nth-child(4){
+    border-top: 6px solid rgb(255, 255, 0);
+    transform: rotateX(35deg) rotateY(55deg);
+    animation: rotate-four 1s linear infinite;
+}
+
+
+@keyframes rotate-one {
+    to{
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+
+    }
+}
+
+@keyframes rotate-two {
+    to{
+        transform: rotateX(50deg) rotateY(-45deg) rotateZ(360deg);
+
+    }
+}
+
+@keyframes rotate-three {
+    to{
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+
+    }
+}
+@keyframes rotate-four {
+    to{
+        transform: rotateX(75deg) rotateY(24deg) rotateZ(360deg);
+
+    }
+}
+
+
+/* =============================== */
+
+.icon2{
+    width: 200px;
+    position:absolute;
+    right: -625px;
+    bottom: -280px;
+    height: 200px;
+    border-radius: 50%;
+    /* background: white; */
+    perspective: 800px;
+}
+.icon2 .icon2_items{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    margin-top: -10px;
+}
+
+.icon2 .icon2_items:nth-child(1){
+    border-bottom: 6px solid rgb(255, 255, 255);
+    transform: rotateX(35deg) rotateY(-45deg);
+    animation: rotate-one 1s linear infinite;
+}
+
+.icon2 .icon2_items:nth-child(2){
+    border-right: 6px solid rgb(255, 255, 255);
+    transform: rotateX(50deg) rotateY(10deg);
+    animation: rotate-two 1s linear infinite;
+}
+.icon2 .icon2_items:nth-child(3){
+    border-top: 6px solid rgb(255, 255, 0);
+    transform: rotateX(35deg) rotateY(55deg);
+    animation: rotate-three 1s linear infinite;
+}
+.icon2 .icon2_items:nth-child(4){
+    border-top: 6px solid rgb(255, 255, 0);
+    transform: rotateX(35deg) rotateY(55deg);
+    animation: rotate-four 1s linear infinite;
+}
+
+
+@keyframes rotate-one {
+    to{
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+
+    }
+}
+
+@keyframes rotate-two {
+    to{
+        transform: rotateX(50deg) rotateY(-45deg) rotateZ(360deg);
+
+    }
+}
+
+@keyframes rotate-three {
+    to{
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+
+    }
+}
+@keyframes rotate-four {
+    to{
+        transform: rotateX(75deg) rotateY(24deg) rotateZ(360deg);
+
+    }
+}
+
+
+.home-container{
+    background-color:black;
+    width: 100%;
+    height: 150px;
+    margin-top: -20px;
+    color: white;
+}
+.t{
+    background-color: rgb(0, 0, 0);
+    margin-top: -125px;
+    margin-left: -40px;
+    height: 190px;
+    padding: 10px;
+    width: 180vh;
+
+}
+
+
+.whats_new{
+    position: absolute;
+    top: -5px;
+}
+
+
+.tr{
+    background: linear-gradient(to left, yellow, black);
+}
+
+
+
+.tutorials_nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.tutorials_nav ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.tutorials_nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: rgb(255, 255, 0);
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: 0.5s;
+
+}
+
+.tutorials_nav ul li:hover::after{
+    width: 100%;
+}
+
+.tutorials_sm_nav{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10vh;
+    margin-right: 15vh;
+}
+
+
+
+
+
+
+
