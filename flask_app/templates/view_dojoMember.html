@@ -14,7 +14,7 @@
 <body class="view_bg">
     <div class="view_top container-fluid background centerVertically nav">
         <div id="view_title" class="container-fluid background centerVertically left">
-            <p class="view_members"> Welcome, {{this_dojoMember.user.first_name}} ({{this_dojoMember.user.account_type}})</p> 
+            <p class="view_members"> Welcome, {{this_dojoMember.user.first_name}} ({{this_dojoMember.user.account_type}})</p>
             <p class="view_left">View Dojo Member!</p>
         </div>
             <!-- <img src="../../static/dojo.png" height="100px">  -->
@@ -44,7 +44,7 @@
                 <p>Date Belt Received: {{this_dojoMember.date_received}}</p>
                 <!-- <a href="/member/{{this_dojoMember.id}}/edit">Edit</a> -->
                 <!-- <a href="/member/{{this_dojoMember.id}}/edit"><button type="submit" class="edit"><span class="span3"></span>ENTER!</button></a> -->
-                <div class="edit"> 
+                <div class="edit">
                     <ul class="edit_ p-1">
                         <li><a href="/member/{{this_dojoMember.id}}/edit">Edit</a></li>
                     </ul>
@@ -75,7 +75,7 @@
 
             geocoder.geocode({
             'address': address
-            }, 
+            },
             function(results, status) {
             if(status == google.maps.GeocoderStatus.OK) {
                 new google.maps.Marker({
@@ -87,8 +87,7 @@
             });
         }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOURKEY=myMap"></script>
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5hoxXjV1HvShGsZxNR5AcgM4-j5KW0G4&callback=myMap"></script>
 </body>
 <footer class="nav"></footer>
 </html>

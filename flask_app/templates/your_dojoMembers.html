@@ -11,7 +11,7 @@
 <body class="body">
     <div class="container-fluid background centerVertically nav">
         <div class="container-fluid background centerVertically left">
-            <p><strong> Welcome, {{this_user.first_name}} ({{this_user.account_type}})</strong></p> 
+            <p><strong> Welcome, {{this_user.first_name}} ({{this_user.account_type}})</strong></p>
             <p class="left">My Dojo Member List</p>
         </div>
         <img src="../../static/dojo.png" height="100px">
@@ -39,7 +39,7 @@
                     <div id="googleMap" style="width:100%;height:300px;">
                     </div>
                 </div>
-    
+
                 <script>
                     function myMap() {
                         var address = "{{member.location}}";
@@ -73,7 +73,7 @@
                     }
                     myMap();
                 </script>
-                <script src="https://maps.googleapis.com/maps/api/js?key=YOURKEY=myMap"></script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5hoxXjV1HvShGsZxNR5AcgM4-j5KW0G4&callback=myMap"></script>
                 {% endif %}
         {% endfor %}
     </div>

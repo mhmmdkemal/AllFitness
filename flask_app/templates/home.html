@@ -18,8 +18,11 @@
         <div class="home-container even">
             <h1 class="whats_new majority-width text-white" id="whats_new">What's new {{user.first_name}} {{user.last_name}}...</h1>
             <div class="w">
-                <div class="home_nav"> 
+                <div class="home_nav">
                     <ul class="home_sm_nav p-1">
+                        {% if user.account_type == "admin" %}
+                            <li><a href="/member/dashboard">Dashboard</a></li>
+                        {% endif %}
                         <li><a href="/tutorials">Tutorials</a></li>
                         <li><a href="/share_routine/new">Share Workout</a></li>
                         <li><a href="/logout">Logout</a></li>
