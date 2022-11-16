@@ -11,16 +11,19 @@
     <title class="text-white">Edit Your Routine</title>
 </head>
 <body class="edit_bg">
-    <div class="share_routine_container container">
-        <h1 class="majority-width text-white" id="share_title" name="first_name">Edit your routine {{user.first_name}} {{user.last_name}}!</h1>
-        <div class="flexx flex">
-            <div class="edit_routine_nav"> 
+    <div class="edit_routine_container container">
+        <div class="edit_container even">
+            <h1 class="majority-width  text-white" id="edit_title" name="first_name">Edit your routine {{user.first_name}} {{user.last_name}}!</h1>
+            <div class="flexx flex">
+                <p class="changes" > Change and Update your routines</p>
+                <div class="edit_routine_nav"> 
                     <ul class="edit_routine_sm_nav p-1" id="edit_nav">
                         <li><a href="/home">Home</a></li>
                         <li><a href="/tutorials">Workout Tutorials</a></li>
                         <li><a href="/logout">Logout</a></li>
                     </ul>
                 </div>
+            </div>
         </div>
         <div class="error_share ">
             {% with messages = get_flashed_messages() %}
@@ -36,24 +39,24 @@
             {% endwith %}
         </div>
 
-        <form id="table" action="/workout/{{workout.id}}" method="post" class="experience" name="experience">
+        <form id="table_edit" action="/workout/{{workout.id}}" method="post" class="experience" name="experience">
             <div>
-                <div class="form-group text-white">
+                <div class="form-group">
                     <label for="experience" name="experience">Experience Level:</label>
 
                     <input type="text" value="{{workout.experience}}" name="experience" class="form-control" placeholder="Beginner, Intermediate, Advanced, etc">
             </div>
-            <div class="form-group text-white">
+            <div class="form-group">
                 <label for="goals" class="form-label">Body Type(Goals):</label>
                 <input type="text" name="goals" value="{{workout.goals}}" class="form-control" id="goals" placeholder="What body type are you going for?">
             </div>
 
-            <div class="form-group text-white">
+            <div class="form-group">
                 <label for="days" class="form-label">How many Days(Weekly):</label>
                 <input type="number" name="days" value="{{workout.days}}" class="form-control" id="days" placeholder="How many Days per Week?">
             </div>
             <div>
-                <label for="routine" class="form-label text-white">Routine:</label><br>
+                <label for="routine" class="form-label">Routine:</label><br>
                 <textarea name="routine" id="routine"  cols="50" rows="8" placeholder="Day#/Muscles/Workout/Sets/Reps">{{workout.routine}}</textarea >
             </div>
             <div>

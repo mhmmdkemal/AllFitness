@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='../static/style.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/style2.css') }}" >
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <title>Add Member</title>
 </head>
-<body class="body">
-    <div class="container-fluid background centerVertically nav">
+<body class="add_bg">
+    <div class="edit_top container-fluid background centerVertically nav">
         <div class="container-fluid background centerVertically left">
-            <p><strong>Welcome, {{this_user.first_name}} ({{this_user.account_type}})</strong></p> 
-            <p class="left">Add Dojo Member</p>
+            <p class="edit_welcome">Welcome, {{this_user.first_name}} ({{this_user.account_type}})</p> 
+            <p class="edit_subtitle">Add Dojo Member</p>
         </div>
-        <img src="../../static/dojo.png" height="100px">
-        <div class="container-fluid background centerVertically right">
-            <p><a  class="btn blue_btn" href="/member/dashboard">Dashboard</a><a  class="btn red_btn" href="/logout">Logout</a></p>
-            <p><a  class="btn blue_btn" href="/user/account">My Members</a><a class="btn blue_btn right"  href="/member/new/member">Add a member</a></p>
+        <!-- <img src="../../static/dojo.png" height="100px"> -->
+        <div class="edit_members_nav">
+            <ul class="view_dojoMember_sm_nav p-1">
+                <li><a href="/member/dashboard">Dashboard</a></li>
+                <li><a href="/logout">Logout</a></li>
+                <li><a href="/user/account">My Members</a></li>
+            </ul>
         </div>
     </div>
 
@@ -26,26 +29,26 @@
         {% with messages = get_flashed_messages() %}     
             {% if messages %}                            
                 {% for message in messages %}            
-                    <p>{{message}}</p>                  
+                    <p class="error">{{message}}</p>                  
                 {% endfor %}
             {% endif %}
         {% endwith %}
-        <div class="container-fluid background">
-            <div>
+        <div class="edit_container container-fluid background">
+            <div class="edit_container_box">
                 <div class="container">
-                    <label for="first_name" class="label-col">First Name:</label>
-                    <input type="text" name="first_name" id="first_name" > 
+                    <label for="first_name" class="label-col">First Name:</label><br>
+                    <input type="text" name="first_name" id="edit_box" > 
                 </div>
                 <div class="container">
-                    <label for="last_name" class="label-col">Last Name:</label>
-                    <input type="text" name="last_name" id="last_name" >
+                    <label for="last_name" class="label-col">Last Name:</label><br>
+                    <input type="text" name="last_name" id="edit_box" >
                 </div>
                 <div class="container">
-                    <label for="age" class="label-col">Age:</label>
-                    <input type="number" name="age" id="age">
+                    <label for="age" class="label-col">Age:</label><br>
+                    <input type="number" name="age" id="age_box">
                 </div>
                 <div class="container">
-                    <select class="upper-case" name="location" id="location">
+                    <select class="upper-case" name="location" id="edit_box">
                         <option value="maryland">Maryland</option>
                         <option value="virginia">virginia</option>
                         <option value="district of columbia">District of Columbia</option>
@@ -54,7 +57,7 @@
                     </select>
                 </div>
                 <div class="container">
-                    <select class="upper-case" name="martial_type" id="martial_type">
+                    <select class="upper-case" name="martial_type" id="edit_box">
                         <option value="jiu-jitsu">Jiu-Jitsu</option>
                         <option value="judo">Judo</option>
                         <option value="muay-thai">Muay Thai</option>
@@ -62,21 +65,23 @@
                     </select>
                 </div>
                 <div class="container">
-                    <select class="upper-case" name="plan_type" id="plan_type">
+                    <select class="upper-case" name="plan_type" id="edit_box">
                         <option value="gold">Gold</option>
                         <option value="silver">Silver</option>
                     </select>
                 </div>
 
                 <div class="container">
-                    <label for="date_received">Date Received:</label>
-                    <input type="date" id="date_received" name="date_received" value="2022-10-01">
+                    <label for="date_received">Date Received:</label><br>
+                    <input type="date" id="edit_box" name="date_received" value="2022-10-01">
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="edit_btn_container">
+            <button class="edit_btn" type="submit"><span class="span_edit"></span> Add</button>
+        <!-- <div class="container">
             <input  type="submit" value="add" class="offset-btn" >
-        </div>
+        </div> -->
 
     </form>
 </body>

@@ -11,17 +11,19 @@
     <title class="text-white">Share Your Routine</title>
 </head>
 <body class="share_bg">
-    <div class="share_routine_container container">
-        <h1 class="majority-width text-white" id="share_title" name="first_name">Share your routine {{user.first_name}} {{user.last_name}}...</h1>
-        <div class="flex">
-            <h1 id="help" class="majority-width text-white">Help guide others in their fitness journey.</h1>
-            <div class="share_routine_nav"> 
+    <div class="share_routine_container">
+        <div class="share_container even">
+            <h1 class="majority-width text-white" id="share_title" name="first_name">Share your routine {{user.first_name}} {{user.last_name}}...</h1>
+            <div class="flex">
+                <h1 id="helpp" class="majority-width">Help guide others in their fitness journey.</h1>
+                <div class="share_routine_nav"> 
                     <ul class="share_routine_sm_nav p-1">
                         <li><a href="/home">Home</a></li>
                         <li><a href="/tutorials">Workout Tutorials</a></li>
                         <li><a href="/logout">Logout</a></li>
                     </ul>
                 </div>
+            </div>
         </div>
         <div class="error_share  mx-auto ">
             {% with messages = get_flashed_messages() %}
@@ -40,22 +42,22 @@
         <form id="left_input" action="/share_routine/" method="post" class="experience" name="experience">
             <div class="left_form">
                 <div>
-                    <div class="form-group text-white">
+                    <div class="form-group ">
                         <label for="experience" name="experience">Experience Level:</label>
                         <input type="text" name="experience" class="form-control" placeholder="Beginner, Intermediate, Advanced, etc">
                     </div>
                 </div>
-                <div class="form-group text-white">
+                <div class="form-group ">
                     <label for="goals" class="form-label">Body Type(Goals):</label>
                     <input type="text" name="goals" class="form-control" id="goals" placeholder="Slim/Ripped/Shredded/Bulky/Toned/Fit">
                 </div>
 
-                <div class="form-group text-white">
+                <div class="form-group ">
                     <label for="days" class="form-label">How many Days(Weekly):</label>
                     <input type="number" name="days" class="form-control" id="days" placeholder="How many Days per Week?">
                 </div>
                 <div>
-                    <label for="routine" class="form-label text-white">Routine:</label><br>
+                    <label for="routine" class="form-label ">Routine:</label><br>
                     <textarea name="routine" id="routine" cols="50" rows="8" placeholder="Day#/Muscles/Workout/Sets/Reps"></textarea >
                 </div>
             </div>

@@ -119,7 +119,7 @@ class User:
         is_valid = True
         #check if all fields have at least something in them
         if len(user_data['first_name']) < 1 or len(user_data['last_name']) < 1 or len(user_data['email']) < 1 or  len(user_data["password"]) < 1:
-            flash("Field can not be empy!", "register")
+            flash("Field is required!", "register")
             is_valid = False
         # Check first and last name are greater than 3 characters
         if len(user_data["first_name"]) < 2:
@@ -144,7 +144,7 @@ class User:
 
         # Minimum eight characters, at least one letter and one number
         if not PASS_REGEX.match(user_data["password"]):
-            flash("Minimum eight characters, at least one letter and one number!", "register")
+            flash("Password must be a minimum of eight characters, with at least one letter and one number", "register")
             is_valid = False
         # Password must be 8 or more characters
         if len(user_data["password"]) < 8:
@@ -160,7 +160,7 @@ class User:
     def validate_login(user_data):
         #check if all fields have at least something in them
         if len(user_data['email']) < 1 or  len(user_data["password"]) < 1:
-            flash("Field can not be empy!", "login")
+            flash("Field is required!", "login")
             is_valid = False
         if not EMAIL_REGEX.match(user_data['email']):
             flash("Invalid login credentials", "login") # Intentionally vague - so hackers aren't tipped off

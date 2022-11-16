@@ -4,25 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='../static/style.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/style2.css') }}" >
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
     <title>Dashboard</title>
 </head>
-<body class="body">
+<body class="all_dojoMember_bg">
     <div class="container-fluid background centerVertically nav">
         <div class="container-fluid background centerVertically left">
-            <p><strong> Welcome, {{this_user.first_name}} ({{this_user.account_type}})</strong></p>
-            <p class="left">Track Dojo Members</p>
+            <p><strong class="welcome_member"> Welcome, {{this_user.first_name}} ({{this_user.account_type}})</strong></p>
+            <p class="track">Track Dojo Members</p>
         </div>
-        <img src="../static/dojo.png" height="100px">
-        <div class="container-fluid background centerVertically right">
+        <!-- <div class="container-fluid background centerVertically right">
             <p><a  class="btn blue_btn" href="/home">Workouts</a><a  class="btn red_btn" href="/logout">Logout</a></p>
             <p><a  class="btn blue_btn" href="/user/account">My Members</a><a class="btn blue_btn right"  href="/member/new/member">Add a member</a></p>
+        </div> -->
+        <div class="all_dojoMember_nav"> 
+            <ul class="all_dojoMember_sm_nav p-1">
+                <li><a href="/home">Workouts</a></li>
+                <li><a href="/logout">Logout</a></li>
+                <li><a href="/user/account">My Members</a></li>
+                <li><a href="/member/new/member">Add A Member</a></li>
+            </ul>
         </div>
     </div>
     <div class="container overflow">
-        <h3>All Members</h3>
+        <h3 class="all_members">All Members</h3>
         <table id="myTable"class="table table-striped">
             <thead>
                 <tr>

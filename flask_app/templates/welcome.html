@@ -12,24 +12,28 @@
 <body class="bodyy">
     <div class="hero">
         <div class="inner-text">
-            <p class="p1">WELCOME</p><br>
-            <p class="p1">2</p><br>
-            <p class="p2">FITNESS HALL</p>
+            <p class="p1">WELCOME <br>TO</p><br>
+            <p class="p2">ALL FITNESS</p>
         </div>
         <div class="form-group p-3 " id="enter">
-            <a href="/welcome_path"><button type="submit" class="enter"><span class="span"></span>ENTER!</button></a>
+            <a href="/log_reg_page"><button type="submit" class="enter"><span class="span"></span>ENTER!</button></a>
         </div>
         <div>
             <div>
                 <style>
                     #logo1 {
                         position: relative;
-                        height: 220px;
                         cursor: pointer;
-                        margin-bottom: -550px;
+                        
+                        
                     }
                 </style>
-                <img src="../static/imgs/logo2.jpeg" alt="dumbell_icon" id="logo1" class="logo1">
+                <div id="logo1" class="welcome_icon">
+                    <div class="welcome_icon_items"></div>
+                    <div class="welcome_icon_items"></div>
+                    <div class="welcome_icon_items"></div>
+                    <div class="welcome_icon_items"></div>
+                </div>
                 <script>
                     logo1.onclick = function() {
                     let start = Date.now();
@@ -39,12 +43,12 @@
                 
                         logo1.style.left = timePassed / 5 + 'px';
                 
-                        if (timePassed > 2000) clearInterval(timer);
+                        if (timePassed > 6000) clearInterval(timer);
                 
-                    }, 20);
+                    },30);
                     }
                 </script>
-                <div><p class="click">Click!</p></div>
+            <!-- <div><p class="click">Click!</p></div>  -->
             </div>
 
         </div>

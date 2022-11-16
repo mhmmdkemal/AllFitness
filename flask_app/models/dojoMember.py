@@ -133,7 +133,7 @@ class DojoMember:
         is_valid = True
         # #check if all fields have at least something in them
         if len(form_data['first_name']) < 1 or len(form_data['last_name']) < 1 or len(form_data['age']) < 1:
-            flash("Field can not be empy!", "register")
+            flash("Field is required!", "register")
             is_valid = False
         # Check first and last name are greater than 3 characters
         if len(form_data["first_name"]) < 3:
