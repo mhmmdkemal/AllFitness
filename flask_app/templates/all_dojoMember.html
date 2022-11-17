@@ -22,18 +22,17 @@
         <div class="all_dojoMember_nav"> 
             <ul class="all_dojoMember_sm_nav p-1">
                 <li><a href="/home">Workouts</a></li>
-                <li><a href="/logout">Logout</a></li>
                 <li><a href="/user/account">My Members</a></li>
                 <li><a href="/member/new/member">Add A Member</a></li>
+                <li><a href="/logout">Logout</a></li>
             </ul>
         </div>
     </div>
-    <div class="container overflow">
-        <h3 class="all_members">All Members</h3>
-        <table id="myTable"class="table table-striped">
+    <div class="tbl"><br>
+        <table id="myTable"class="members_table table table-striped">
             <thead>
                 <tr>
-                    <th>Full Name</th>
+                    <th >Full Name</th>
                     <th>Age</th>
                     <th>Location</th>
                     <th>Martial Art Type</th>
@@ -43,20 +42,23 @@
                 </tr>
                 <tbody>
                     {% for member in all_member%}
-                        <tr>
+                        <tr class="table_inside">
                             <td>{{member.first_name}} {{member.last_name}}</td>
                             <td>{{member.age}}</td>
                             <td class="upper-case" > {{member.location}}</td>
                             <td>{{member.martial_type}}</td>
                             <td>{{member.plan_type}}</td>
                             <td>{{member.date_received}}</td>
-                            <td><a href="/member/show/{{member.id}}">Details</a>
-                                {% if member.user.id == session["user_id"] %}
-                                    <a href="/member/{{member.id}}/edit">Edit</a>
-                                    {% if member.user.account_type == "admin" %}
-                                        <a href="/member/{{member.id}}/delete">Delete</a>
+                            <td class="action">
+                                <ul>
+                                    <li><a href="/member/show/{{member.id}}">Details</a></li>
+                                    {% if member.user.id == session["user_id"] %}
+                                        <li><a href="/member/{{member.id}}/edit">Edit</a></li>
+                                        {% if member.user.account_type == "admin" %}
+                                            <li><a href="/member/{{member.id}}/delete">Delete</a></li>
+                                        {% endif %}
                                     {% endif %}
-                                {% endif %}
+                                </ul>
                             </td>
                         </tr>
                     {% endfor %}

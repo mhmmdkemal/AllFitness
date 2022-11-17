@@ -8,32 +8,35 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <title>Your Members</title>
 </head>
-<body class="body">
-    <div class="container-fluid background centerVertically nav">
+<body class="your_dojoMembers_bg">
+    <div class=" view_dojo_top container-fluid background centerVertically nav">
         <div class="container-fluid background centerVertically left">
-            <p><strong> Welcome, {{this_user.first_name}} ({{this_user.account_type}})</strong></p>
-            <p class="left">My Dojo Member List</p>
+            <p class="view_dojo_members"> Welcome, {{this_user.first_name}} ({{this_user.account_type}})</p>
+            <p class="view_dojo_left">My Dojo Member List</p>
         </div>
-        <img src="../../static/dojo.png" height="100px">
-        <div class="container-fluid background centerVertically right">
-            <p><a  class="btn blue_btn" href="/member/dashboard">Dashboard</a><a  class="btn red_btn" href="/logout">Logout</a></p>
-            <p><a class="btn blue_btn right"  href="/member/new/member">Add a member</a></p>
+        <!-- <img src="../../static/dojo.png" height="100px"> -->
+        <div class="view_members_nav">
+            <ul class="view_dojoMember_sm_nav p-1">
+                <li><a href="/member/dashboard">Dashboard</a></li>
+                <li><a href="/user/account">My Members</a></li>
+                <li><a href="/member/new/member">Add A Member</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
         </div>
     </div>
     <div class="container">
-        <h3> My Members</h3>
         {% for member in all_member%}
             {% if member.user.id == session["user_id"] %}
-                <div style="background-color: {{member.plan_type}}" class="border container test_map ">
-                    <div>
-                        <h4 ><strong>DETAILS:</strong></h4>
-                        <p><strong>Full Name => </strong>  {{member.first_name}} {{member.last_name}} </p>
-                        <p><strong>Added by => </strong>  {{member.user.first_name}} {{member.user.last_name}} ({{member.user.account_type}})</p>
-                        <p><strong>Location => </strong>  <a  class="upper-case"> {{member.location}}</a></p>
-                        <p><strong>Age => </strong>   {{member.age}}</p>
-                        <p><strong>Martial Art Type => </strong>{{member.martial_type}}</p>
-                        <p><strong>Plan Type => </strong> <a  class="upper-case">{{member.plan_type}}</a></p>
-                        <p><strong>Date Belt Received => </strong>{{member.date_received}}</p>
+                <div style="background-color: {{member.plan_type}}" class="border_2 border container test_map ">
+                    <div class="details_2">
+                        <h4 >DETAILS</h4>
+                        <p>Full Name: :  {{member.first_name}} {{member.last_name}} </p>
+                        <p>Added by:   {{member.user.first_name}} {{member.user.last_name}} ({{member.user.account_type}})</p>
+                        <p>Location:   <a  class="upper-case"> {{member.location}}</a></p>
+                        <p>Age:    {{member.age}}</p>
+                        <p>Martial Art Type: {{member.martial_type}}</p>
+                        <p>Plan Type:  <a  class="upper-case">{{member.plan_type}}</a></p>
+                        <p>Date Belt Received: {{member.date_received}}</p>
                         <a href="/member/{{member.id}}/edit">Edit</a>
                     </div>
                     <div id="googleMap" style="width:100%;height:300px;">

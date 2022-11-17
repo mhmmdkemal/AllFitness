@@ -24,16 +24,16 @@ background:linear-gradient(to left, black, yellow);
     height: 100vh;
     background-size: cover;
     background-position: center;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.475), rgba(0, 0, 0, 0.475)), url(../imgs/admin-3.jpeg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.350), rgba(0, 0, 0, 0.350)), url(../imgs/office6.jpeg);
 }
 
 .edit_pg_bg{
     animation:fadeIn 5s ease-in-out;
     width: 100%;
-    height: 100%;
+    height: 155vh;
     background-size: cover;
     background-position: center;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.475), rgba(0, 0, 0, 0.475)), url(../imgs/admin2.jpeg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.350), rgba(0, 0, 0, 0.350)), url(../imgs/office9.jpeg);
 }
 
 .view_bg{
@@ -51,7 +51,7 @@ background:linear-gradient(to left, black, yellow);
         height: 100%;
         background-size: cover;
         background-position: center;
-        background-image:linear-gradient(rgba(0, 0, 0, 0.308), rgba(0, 0, 0, 0.307)), url(../imgs/admin_three.jpeg);
+        background-image:linear-gradient(rgba(0, 0, 0, 0.308), rgba(0, 0, 0, 0.307)), url(../imgs/office8.jpeg);
     
 }
 .users_bg{
@@ -64,7 +64,24 @@ background:linear-gradient(to left, black, yellow);
 
 }
 
+.your_dojoMembers_bg{
+    animation:fadeIn 5s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.308), rgba(0, 0, 0, 0.307)), url(../imgs/4d3.jpeg);
+}
 /* ===================xxxxxxxxxx======================= */
+
+
+#googleMap{
+    border-radius: 5%;
+    margin-top: 90px;
+    margin-right: 50px;
+    padding: 150px;
+    box-shadow: 5px 5px 5px 5px white;
+}
 
 /* .animation{
     background: linear-gradient(to left , black, yellow);
@@ -244,6 +261,12 @@ background:linear-gradient(to left, black, yellow);
 
 
 
+/* ========ADD PAGE ICON ======================================= */
+
+
+/* ================================================ */
+
+
 .login_bg            
 {
     height: 100vh;
@@ -402,6 +425,7 @@ button:hover {
 
 .reg_btn, .login_btn{
     color: white;
+    margin-left: 20px;
 }
 table {
     border-collapse: collapse;
@@ -410,20 +434,22 @@ table {
 td,
 th {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 10px;
 
 }
 
-tr {
-    background: linear-gradient(to left, black, rgba(255, 255, 0, 0.829));
-}
-
-th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
+tr    { background: linear-gradient(to left, yellow, black);
     color: white;
 }
+
+.table_inside{
+    background: linear-gradient(to right, black, rgba(255, 255, 255, 0.699) 150%);
+}
+#myTable{
+    box-shadow: 4px 6px rgba(255, 255, 255, 0.723);
+    border-radius: 10px;
+}
+
 
 
 .allDojos{
@@ -488,10 +514,27 @@ input, textarea {
     margin: 10px;
     box-shadow: 10px 5px 10px 5px white;
 }
+
+.border_2{
+    border-style:inherit;
+    margin-bottom: 1%;
+    border-radius: 100px;
+    height: 60vh;
+    padding: 30px;
+    margin-bottom: 150px;
+    box-shadow: 10px 5px 10px 5px white;
+
+}
 .details{
     margin: 20px;
     margin-left: 60px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; ;
+}
+
+.details_2{
+    margin: 20px;
+    margin-left: 60px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
 }
 
 .left {
@@ -536,7 +579,10 @@ input, textarea {
 
 /* ============all_dojoMember nav =================== */
 
-
+.all_dojoMember_sm_nav{
+    display: flex;
+    justify-content: flex-end;
+}
 .all_dojoMember_nav{
     color: rgb(255, 255, 0);
     align-items: flex-end;
@@ -595,9 +641,31 @@ input, textarea {
 
 .error{
     align-items: center;
-    color: rgb(255, 0, 0);
-    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 500;
+    background: linear-gradient(to left, rgba(255, 0, 0, 0.5), black, rgba(255, 0, 0, 0.5), black,rgba(255, 0, 0, 0.5), black);
+    border-radius: 100px;
+    border: 2px solid rgba(255, 0, 0, 0.794);
+    box-shadow: 4px 4px 4px 4px black;
+    text-align: center;
+    
+}
+
+.error1{
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 500;
     margin: 10px;
+    background: linear-gradient(to left, rgba(255, 0, 0, 0.5), black, rgba(255, 0, 0, 0.5), black,rgba(255, 0, 0, 0.5), black);
+    border-radius: 100px;
+    border: 2px solid rgb(255, 0, 0);
+    text-align: center;
+    box-shadow: 4px 4px 4px 4px black;
+    width: 75vh;
+    position: relative;
+    right: -400px;
 }
 
 
@@ -605,9 +673,36 @@ input, textarea {
     background-color: black;
     height: 150px;
     color: white;
+    width: 100%;
+
+}
+.view_dojo_top{
+    background-color: black;
+    height: 150px;
+    color: white;
+}
+.view_dojo_members{
+    font-size: 35px;
+    font-weight: 600;
+    margin-left: -10px;
+    padding: 10px;
+    margin-top:20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 
 }
 
+.view_dojo_left{
+    font-size: 23px;
+    color: yellow;
+    font-weight: 200;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    padding: 1px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
+}
 .view_members{
     font-size: 35px;
     font-weight: 600;
@@ -644,6 +739,9 @@ input, textarea {
 .view_members_nav{
     color: rgb(255, 255, 0);
     align-items: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    /* margin-right: -175px; */
     
 }
 
@@ -698,28 +796,39 @@ input, textarea {
     color: yellow;
 }
 .edit_container{
-    border: 2px solid yellow;
+    border: 4px solid yellow;
+    box-shadow: 6px 6px 6px 6px black;
     width: 600px;
     border-radius: 20px;
     margin: 20px;
-    background: linear-gradient(to right, rgba(255, 255, 0, 0.559), black);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.559)20%, black);
 
 }
 
 .edit_container_box{
     text-align: center;
     margin-left: -600px;
-    color: #000000;
+    color: yellow;
+    height: 110vh;
 }
-.age_box{
+#age_box{
     min-width: 10px;
+    text-align: center;
 }
 
 
 
-#edit_box{
-    width: 400px;
-    height: 50px;
+#edit_box, #age_box{
+    width: 350px;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to right, black 60%, rgba(255, 255, 255, 0.557));
+    text-align: center;
+}
+.container_add{
+    height: 100px;
 }
 
 .edit_member_top{
@@ -732,10 +841,14 @@ input, textarea {
 
 
 
-
+.add_nav{
+    margin-right: -300px;
+}
 .edit_members_nav{
     color: rgb(255, 255, 0);
     align-items: flex-end;
+    display: flex;
+    justify-content: flex-end;
     
 }
 
@@ -823,10 +936,9 @@ input, textarea {
 
 
 
-*/
 .action{
     border-radius: 5%;
-    width: 600px;
+    width: 400px;
     margin-right: -200px;
     font-size: 15px;
 }
@@ -843,9 +955,10 @@ input, textarea {
 .action ul li a{
     border-radius: 5px;
     text-decoration: none;
-    color: rgb(56, 172, 255);
+    color: rgba(0, 36, 197, 0.789);
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 600;
+    font-size: 15px;
 }
 
 .action ul li::after{
@@ -863,3 +976,4 @@ input, textarea {
 .action ul li:hover::after{
     width: 100%;
 }
+
