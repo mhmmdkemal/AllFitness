@@ -325,6 +325,7 @@
 .home_sm_nav{
     margin-top: 55px;
     font-size: 15px;
+    margin-right: -175px;
 }
 
 .home_nav{
@@ -440,6 +441,7 @@
 /* ============EDIT ====================== */
 .edit_routine_sm_nav{
     margin-bottom: 50px;
+    margin-right: -175px;
     
 }
 .edit_routine_nav ul li{
@@ -719,6 +721,8 @@ button{
     width: 30%;
     height: 20px;
 }
+
+
 .error_share{
     display: flex;
     flex-direction: column;
@@ -727,21 +731,45 @@ button{
     font-size: 20px;
     width: 1000px;
 
-
-
-
-
-
 }
+
+
+
+
+
+
+
 .error_sharing{
     text-align: center;
-    align-items: center;
 
-    color: rgb(255, 0, 0);
-    font-size: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px;
     width: 50%;
     height: 30px;
+    background: linear-gradient(to left, rgba(255, 0, 0, 0.5), black, rgba(255, 0, 0, 0.5), black,rgba(255, 0, 0, 0.5), black);
+    border-radius: 100px;
+    border: 2px solid rgb(255, 0, 0);
+    box-shadow: 4px 4px 4px 4px black;
 }
+
+
+/* .error{
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px;
+    background: linear-gradient(to left, rgba(255, 0, 0, 0.5), black, rgba(255, 0, 0, 0.5), black,rgba(255, 0, 0, 0.5), black);
+    border-radius: 100px;
+    border: 2px solid rgb(255, 0, 0);
+    text-align: center;
+    box-shadow: 4px 4px 4px 4px black;
+    width: 75vh;
+    position: relative;
+    right: -400px;
+} */
 
 .span{
     background:rgba(255, 255, 0, 0.300);

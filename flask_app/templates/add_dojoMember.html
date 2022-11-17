@@ -17,9 +17,10 @@
         <!-- <img src="../../static/dojo.png" height="100px"> -->
         <div class="edit_members_nav">
             <ul class="view_dojoMember_sm_nav p-1">
+                <li><a href="/home">Workouts</a></li>
                 <li><a href="/member/dashboard">Dashboard</a></li>
-                <li><a href="/logout">Logout</a></li>
                 <li><a href="/user/account">My Members</a></li>
+                <li><a href="/logout">Logout</a></li>
             </ul>
         </div>
     </div>
@@ -29,25 +30,26 @@
         {% with messages = get_flashed_messages() %}     
             {% if messages %}                            
                 {% for message in messages %}            
-                    <p class="error">{{message}}</p>                  
+                    <p class="error1">{{message}}</p>                  
                 {% endfor %}
             {% endif %}
         {% endwith %}
         <div class="edit_container container-fluid background">
             <div class="edit_container_box">
-                <div class="container">
+                <h3  class="edit_member_top text-white">Add a Member</h3>
+                <div class="container_add container">
                     <label for="first_name" class="label-col">First Name:</label><br>
-                    <input type="text" name="first_name" id="edit_box" > 
+                    <input placeholder="First Name" type="text" name="first_name" id="edit_box" > 
                 </div>
-                <div class="container">
+                <div class="container_add container">
                     <label for="last_name" class="label-col">Last Name:</label><br>
-                    <input type="text" name="last_name" id="edit_box" >
+                    <input placeholder="Last Name" type="text" name="last_name" id="edit_box" >
                 </div>
-                <div class="container">
+                <div class="container_add container ">
                     <label for="age" class="label-col">Age:</label><br>
                     <input type="number" name="age" id="age_box">
                 </div>
-                <div class="container">
+                <div class="container_add container">
                     <select class="upper-case" name="location" id="edit_box">
                         <option value="maryland">Maryland</option>
                         <option value="virginia">virginia</option>
@@ -56,7 +58,7 @@
                         <option value="california">California</option>
                     </select>
                 </div>
-                <div class="container">
+                <div class="container_add container">
                     <select class="upper-case" name="martial_type" id="edit_box">
                         <option value="jiu-jitsu">Jiu-Jitsu</option>
                         <option value="judo">Judo</option>
@@ -64,16 +66,16 @@
                         <option value="boxing">Boxing</option>
                     </select>
                 </div>
-                <div class="container">
+                <div class="container_add container">
                     <select class="upper-case" name="plan_type" id="edit_box">
                         <option value="gold">Gold</option>
                         <option value="silver">Silver</option>
                     </select>
                 </div>
 
-                <div class="container">
+                <div class="container_add container">
                     <label for="date_received">Date Received:</label><br>
-                    <input type="date" id="edit_box" name="date_received" value="2022-10-01">
+                    <input  type="date" id="edit_box" name="date_received" value="2022-10-01">
                 </div>
             </div>
         </div>

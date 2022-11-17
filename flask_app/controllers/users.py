@@ -15,7 +15,7 @@ def log_reg_page():
 def user_registration():
     # Validate the registration first
     if not user.User.validate_registration(request.form):
-        return redirect("/")
+        return redirect("/log_reg_page")
     # Save the newly registered user to the DB
     data = {
         "first_name": request.form["first_name"],
