@@ -1,5 +1,5 @@
 # AllFitness
-
+<img src="https://github.com/JoshuaRosado/JoshuaRosado/blob/main/all_fitness.webp" width="256"/>
 A web application that allows the tracking of members at a gym and a social media collaborative platform
 
 - About application
